@@ -1,0 +1,68 @@
+.mainmenu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:
+    "portadamenu portadamenu"
+    "carta1 carta2"
+    "carta3 carta3"
+    ;
+    overflow: hidden;
+}
+.portadamenu{
+    grid-area: portadamenu;
+    .indexmenu{
+        background-image: url(../media/fotos/fondomenu.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 35vh;
+        h2{
+            font-family: 'Architects Daughter', cursive;
+            font-size: 4.5rem;
+            color: $colorfuente;
+        }
+    }
+}
+.carta1{
+    grid-area: carta1;
+    @include cartas1y2;
+    img{
+        @include cartas(550px,820px);
+    }
+}
+.carta2{
+    grid-area: carta2;
+    @include cartas1y2;
+    img{
+        @include cartas(550px,820px);
+    }
+}
+.carta3{
+    grid-area: carta3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    h4{
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'Architects Daughter', cursive;
+        color: $colorfuente;
+        margin-bottom: 10px;
+    }
+    img{
+        @include cartas(550px,820px);
+    }
+}
+.botoncartas{
+    color: red;
+    border: solid black 2px;
+    background-color: black;
+    font-size: 2.5rem;
+    font-family: 'Architects Daughter', cursive;
+}

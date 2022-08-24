@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header"
+ "main"
+ "footer"; 
+  height: 100vh;
+}
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+main {
+  background-image: url(../media/fotos/fondoo.webp);
+  background-repeat: cover; }
+
+header {
+  height: auto; }
+  header .logo {
+    width: 150px;
+    height: 150px; }
+  header .listamenu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; }
+    header .listamenu ul {
+      list-style: none;
+      margin: 0px;
+      display: flex; }
+      header .listamenu ul li {
+        margin: 5px; }
+        header .listamenu ul li a {
+          color: rgba(180, 180, 180, 0.473);
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-family: 'Architects Daughter', cursive; }
+          header .listamenu ul li a:hover {
+            color: white; }
+
+.portadaproductos {
+  grid-area: portadaproductos; }
+  .portadaproductos .indexproductos {
+    background-image: url(../media/fotos/fondopiezas.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh; }
+    .portadaproductos .indexproductos h3 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 4.5rem; }
+      .portadaproductos .indexproductos .carrito {
+        font-family: 'Architects Daughter', cursive;
+        color: rgba(233, 231, 231, 0.836);
+        display: flex;
+        padding-top: 70px;
+        flex-direction: column;
+        font-size: 2rem;  }
+        .portadaproductos .indexproductos .carrito a{
+          text-decoration: none;
+          color: rgb(189, 156, 156);
+        }
+        .portadaproductos .indexproductos .carrito:hover {
+          font-family: 'Architects Daughter', cursive;
+          color: rgba(233, 231, 231, 0.836);
+          display: flex;
+          padding-top: 70px;
+          flex-direction: column;
+          font-size: 3rem;  }
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer .footerLogo {
+    margin-left: 5px; }
+    .footer .footerLogo .logo {
+      width: 150px;
+      height: 150px; }
+  .footer .disenofooter {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px; }
+    .footer .disenofooter p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(180, 180, 180, 0.473);
+      font-size: 1.2rem; }
+    .footer .disenofooter .redes {
+      display: flex;
+      justify-content: space-evenly; }
+      .footer .disenofooter .redes a {
+        margin: 10px;
+        text-decoration: none; }
+        .footer .disenofooter .redes a img {
+          margin: 0px;
+          width: 40px;
+          height: 40px; }
+
+
+.mainDeCompra{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.imagenDiv img{
+  width: 250px;
+  height: 250px;
+}
+
+.cajaDeCompra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.producto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+}
+.producto h3{
+  color: aliceblue;
+  text-align: center;
+}
+.producto h4{
+  color: aliceblue;
+  text-align: center;
+}
+.botonCompra{
+  border: none;
+  background-color: rgba(219, 43, 20, 0.726);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 20px;
+  }
+  .botonCompra:hover {background-color: #4e0202}
+  .botonCompra:active {
+    background-color: #4e0202;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.imgCarro{
+width: 100px;
+height: 100px;
+}
+
+/*Estilo carrito de compras*/
+
+.carritoLista{
+color: aliceblue;
+}
+img {
+width: 100%;
+margin-bottom: 10px;
+border-radius: 50%;
+}
+h1 {
+color: rgba(247, 12, 12, 0.5);
+font-weight: 400;
+font-size: 35px;
+text-align: center;
+}
+.boton-carrito {
+border: none;
+color: rgba(247, 12, 12, 0.5);
+font-size: 35px;
+display: flex;
+justify-content: space-around;
+}
+.boton-eliminar{
+
+}
+
+#contenedorProductos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.precioProducto{
+  font-size: 30px;
+  text-decoration: underline;
+}
+.productoEnCarrito{
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+  border: solid 2px black;
+  border-radius: 50px;
+}
+.productoEnCarrito p{
+  font-size: 20px;
+}
+.boton-agregar{
+  background-color: rgba(207, 51, 30, 0.664);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+
+}
+.boton-agregar:hover {background-color: #4e0202}
+.boton-agregar:active {
+  background-color: #4e0202;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.total-carrito{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+.productoEnCarrito {
+margin: 25px 0;
+padding: 25px 10px;
+display: flex;
+justify-content: space-between;
+}
+.contenedorProducto{
+display: flex;
+}
+.productos{
+  display: flex;
+  justify-content: center;
+}
+.producto{
+  border: solid black;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.425);
+  width: 350px;
+}
+
+/*popup compra*/
+.swal2-popup{
+  background: #181818;
+  color: white;
+}
+.swal2-styled.swal2-confirm{
+  background-color: #881313;
+}

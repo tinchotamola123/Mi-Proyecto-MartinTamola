@@ -1,0 +1,57 @@
+.maincontacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+    "portadacontacto portadacontacto"
+    "formulario mapa"
+    ;
+    overflow: hidden;
+}
+    .portadacontacto{
+        grid-area: portadacontacto;
+        background-image: url(../media/fotos/fondocontacto.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 35vh;
+    }
+    .nosotros{
+        h1{
+            font-family: 'Architects Daughter', cursive;
+            color: $colorfuente;
+            font-size: 4.5rem;
+        }
+        p{
+            font-family: 'Architects Daughter', cursive;
+            color: $colorfuente;
+            font-size: 2rem;
+        }
+    }
+    .formu{
+        grid-area: formulario;
+    
+    }
+    .label{
+        font-family: 'Architects Daughter', cursive;
+        font-size: 1.4rem;
+    }
+    .inputs{
+        text-align: center;
+        margin: 10px;
+        width: 50%;
+        height: auto;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+    }
+    .inputsbtn{
+        width: 25%;
+    }
+    .map-responsive{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+

@@ -1,0 +1,1451 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+main {
+  background-image: url(../media/fotos/fondoo.webp);
+  background-repeat: cover; }
+
+header {
+  height: auto; }
+  header .logo {
+    width: 150px;
+    height: 150px; }
+  header .listamenu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; }
+    header .listamenu ul {
+      list-style: none;
+      margin: 0px;
+      display: flex; }
+      header .listamenu ul li {
+        margin: 5px; }
+        header .listamenu ul li a {
+          color: rgba(180, 180, 180, 0.473);
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-family: 'Architects Daughter', cursive; }
+          header .listamenu ul li a:hover {
+            color: white; }
+
+.mainindex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "portada portada portada portada"
+ "carusel carusel carusel carusel"
+ "video1 video1 video2 video2"
+ "nosotros1 nosotros1 nosotros2 nosotros2"
+ "piezas piezas piezas piezas"
+ "foto1 foto2 foto3 foto4";
+  overflow: hidden; }
+
+.portada {
+  grid-area: portada; }
+  .portada .index {
+    background-image: url(../media/fotos/fondoindex.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 95vh; }
+    .portada .index h2 {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 5.5rem;
+      color: rgba(255, 255, 255, 0.836);
+      margin-top: 4rem; }
+    .portada .index a {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 5rem;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 3rem;
+      text-decoration: none; }
+      .portada .index a:hover {
+        transform: scale(1.2, 1.2);
+        color: #8a8a88; }
+
+.carusel {
+  grid-area: carusel; }
+
+.video1 {
+  grid-area: video1; }
+  .video1 video {
+    width: 100%;
+    height: 100%; }
+
+.video2 {
+  grid-area: video2; }
+  .video2 video {
+    width: 100%;
+    height: 100%; }
+
+.nosotros1 {
+  grid-area: nosotros1; }
+  .nosotros1 .fotonosotros {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nosotros1 .fotonosotros img:hover {
+      transform: scale(1.2, 1.2); }
+
+.nosotros2 {
+  grid-area: nosotros2;
+  display: flex;
+  align-items: center; }
+  .nosotros2 .textonosotros {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px; }
+    .nosotros2 .textonosotros h2 {
+      font-size: 3rem;
+      text-align: center; }
+    .nosotros2 .textonosotros p {
+      font-size: 1.5rem;
+      padding-top: 1.5rem;
+      text-align: center; }
+
+.piezas {
+  grid-area: piezas;
+  background-image: url(../media/fotos/piezas.jpg);
+  min-height: 50vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+  .piezas .productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .piezas .productos a {
+      font-size: 4rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      text-decoration: none;
+      margin-top: 2rem; }
+      .piezas .productos a:hover {
+        transform: scale(1.1, 1.1);
+        color: #8a8a88; }
+
+.foto1 {
+  grid-area: foto1;
+  height: 550px;
+  display: inline-block; }
+  .foto1 img {
+    width: 100%;
+    height: 554px; }
+
+.foto2 {
+  grid-area: foto2;
+  height: 550px;
+  display: inline-block; }
+  .foto2 img {
+    width: 100%;
+    height: 554px; }
+
+.foto3 {
+  grid-area: foto3;
+  height: 550px;
+  display: inline-block; }
+  .foto3 img {
+    width: 100%;
+    height: 554px; }
+
+.foto4 {
+  grid-area: foto4;
+  height: 550px;
+  display: inline-block; }
+  .foto4 img {
+    width: 100%;
+    height: 554px; }
+
+.maincontacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "portadacontacto portadacontacto"
+ "formulario mapa";
+  overflow: hidden; }
+
+.portadacontacto {
+  grid-area: portadacontacto;
+  background-image: url(../media/fotos/fondocontacto.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 35vh; }
+
+.nosotros h1 {
+  font-family: 'Architects Daughter', cursive;
+  color: rgba(255, 255, 255, 0.836);
+  font-size: 4.5rem; }
+
+.nosotros p {
+  font-family: 'Architects Daughter', cursive;
+  color: rgba(255, 255, 255, 0.836);
+  font-size: 2rem; }
+
+.formu {
+  grid-area: formulario; }
+
+.label {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.4rem; }
+
+.inputs {
+  text-align: center;
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem; }
+
+.inputsbtn {
+  width: 25%; }
+
+.map-responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.mainmenu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "portadamenu portadamenu"
+ "carta1 carta2"
+ "carta3 carta3";
+  overflow: hidden; }
+
+.portadamenu {
+  grid-area: portadamenu; }
+  .portadamenu .indexmenu {
+    background-image: url(../media/fotos/fondomenu.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh; }
+    .portadamenu .indexmenu h2 {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 4.5rem;
+      color: rgba(255, 255, 255, 0.836); }
+
+.carta1 {
+  grid-area: carta1;
+  display: flex;
+  justify-content: center;
+  margin: 10px; }
+  .carta1 h4 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    margin-bottom: 10px; }
+  .carta1 img {
+    width: 550px;
+    height: 820px; }
+
+.carta2 {
+  grid-area: carta2;
+  display: flex;
+  justify-content: center;
+  margin: 10px; }
+  .carta2 h4 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    margin-bottom: 10px; }
+  .carta2 img {
+    width: 550px;
+    height: 820px; }
+
+.carta3 {
+  grid-area: carta3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px; }
+  .carta3 h4 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    margin-bottom: 10px; }
+  .carta3 img {
+    width: 550px;
+    height: 820px; }
+
+.botoncartas {
+  color: red;
+  border: solid black 2px;
+  background-color: black;
+  font-size: 2.5rem;
+  font-family: 'Architects Daughter', cursive; }
+
+.mainnosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "portadanosotros portadanosotros"
+ "fotopagnosotros textopagnosotros";
+  overflow: hidden; }
+
+.portadanosotros {
+  grid-area: portadanosotros; }
+  .portadanosotros .indexnosotros {
+    background-image: url(../media/fotos/fondonosotros.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh; }
+    .portadanosotros .indexnosotros h3 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 4.5rem; }
+
+.fotopagnosotros {
+  grid-area: fotopagnosotros; }
+  .fotopagnosotros img {
+    width: 500px;
+    height: 650px; }
+
+.textopagnosotros {
+  grid-area: textopagnosotros;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .textopagnosotros h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    margin: 10px;
+    font-size: 3rem; }
+  .textopagnosotros p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    font-size: 1.5rem;
+    margin: 10px;
+    line-height: 1.5;
+    text-align: center; }
+
+.mainproductos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas:
+ "portadaproductos portadaproductos"
+ "descproducto1 fotoproducto1"
+ "fotoproducto2 descproducto2"
+ "descproducto3 fotoproducto3"
+ "fotoproducto4 descproducto4"
+ "descproducto5 fotoproducto5"
+ "fotoproducto6 descproducto6";
+  overflow: hidden; }
+
+.portadaproductos {
+  grid-area: portadaproductos; }
+  .portadaproductos .indexproductos {
+    background-image: url(../media/fotos/fondopiezas.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh; }
+    .portadaproductos .indexproductos h3 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 4.5rem; }
+      .portadaproductos .indexproductos .carrito {
+        font-family: 'Architects Daughter', cursive;
+        color: rgba(233, 231, 231, 0.836);
+        display: flex;
+        padding-top: 70px;
+        flex-direction: column;
+        font-size: 2rem;  }
+        .portadaproductos .indexproductos .carrito a{
+          text-decoration: none;
+          color: rgb(189, 156, 156);
+        }
+        .portadaproductos .indexproductos .carrito:hover {
+          font-family: 'Architects Daughter', cursive;
+          color: rgba(233, 231, 231, 0.836);
+          display: flex;
+          padding-top: 70px;
+          flex-direction: column;
+          font-size: 3rem;  }
+    
+
+.descproducto1 {
+  grid-area: descproducto1;
+  align-items: flex-end;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto1 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+  .descproducto1 .carrito {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(231, 22, 22, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-decoration: underline;
+    font-size: 2rem; }  
+  .descproducto1 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.fotoproducto1 {
+  display: flex;
+  grid-area: fotoproducto1;
+  justify-content: flex-start; }
+  .fotoproducto1 img {
+    width: 450px;
+    height: 450px; }
+
+.fotoproducto2 {
+  display: flex;
+  grid-area: fotoproducto2;
+  justify-content: flex-end; }
+  .fotoproducto2 img {
+    width: 450px;
+    height: 450px; }
+
+.descproducto2 {
+  grid-area: descproducto2;
+  align-items: flex-start;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto2 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+    .descproducto2 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
+  .descproducto2 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.descproducto3 {
+  grid-area: descproducto3;
+  align-items: flex-end;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto3 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+    .descproducto3 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
+  .descproducto3 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.fotoproducto3 {
+  display: flex;
+  grid-area: fotoproducto3;
+  justify-content: flex-start; }
+  .fotoproducto3 img {
+    width: 450px;
+    height: 450px; }
+
+.fotoproducto4 {
+  display: flex;
+  grid-area: fotoproducto4;
+  justify-content: flex-end; }
+  .fotoproducto4 img {
+    width: 450px;
+    height: 450px; }
+
+.descproducto4 {
+  grid-area: descproducto4;
+  align-items: flex-start;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto4 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+    .descproducto4 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
+  .descproducto4 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.descproducto5 {
+  grid-area: descproducto5;
+  align-items: flex-end;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto5 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+    .descproducto5 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
+  .descproducto5 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.fotoproducto5 {
+  display: flex;
+  grid-area: fotoproducto5;
+  justify-content: flex-start; }
+  .fotoproducto5 img {
+    width: 450px;
+    height: 450px; }
+
+.fotoproducto6 {
+  display: flex;
+  grid-area: fotoproducto6;
+  justify-content: flex-end; }
+  .fotoproducto6 img {
+    width: 450px;
+    height: 450px; }
+
+.descproducto6 {
+  grid-area: descproducto6;
+  align-items: flex-start;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .descproducto6 h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 3rem; }
+    .descproducto6 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
+  .descproducto6 p {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 10px;
+    line-height: 1.5; }
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer .footerLogo {
+    margin-left: 5px; }
+    .footer .footerLogo .logo {
+      width: 150px;
+      height: 150px; }
+  .footer .disenofooter {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px; }
+    .footer .disenofooter p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(180, 180, 180, 0.473);
+      font-size: 1.2rem; }
+    .footer .disenofooter .redes {
+      display: flex;
+      justify-content: space-evenly; }
+      .footer .disenofooter .redes a {
+        margin: 10px;
+        text-decoration: none; }
+        .footer .disenofooter .redes a img {
+          margin: 0px;
+          width: 40px;
+          height: 40px; }
+
+@media screen and (max-width: 1200px) {
+  /*Querry Contacto*/
+  .maincontacto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
+    overflow: hidden;
+    justify-content: center; }
+  .portadacontacto {
+    min-height: 25vh; }
+  .nosotros h1 {
+    font-size: 4rem; }
+  .nosotros p {
+    font-size: 1.5rem; }
+  .map-responsive {
+    grid-area: mapa;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-responsive iframe {
+    margin-bottom: 50px;
+    left: 0;
+    right: 15px;
+    top: 25%;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  .label {
+    font-size: 1.2rem; }
+  .inputs {
+    font-size: 0.9rem;
+    line-height: 1.5; } }
+
+@media screen and (max-width: 1140px) {
+  /*Querry menu*/
+  .mainmenu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "portadamenu"
+ "carta1"
+ "carta2"
+ "carta3"; }
+  .portadamenu .indexmenu {
+    min-height: 25vh; }
+    .portadamenu .indexmenu h2 {
+      font-size: 4rem; }
+  .carta1 {
+    grid-area: carta1;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta1 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta1 h4 {
+      font-size: 2.5rem; }
+    .carta1 img {
+      width: 650px;
+      height: 850px; }
+  .carta2 {
+    grid-area: carta2;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta2 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta2 h4 {
+      font-size: 2.5rem; }
+    .carta2 img {
+      width: 650px;
+      height: 850px; }
+  .carta3 h4 {
+    font-size: 2.5rem; }
+  .carta3 img {
+    width: 650px;
+    height: 850px; }
+  .botoncartas {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 768px) {
+  /*Querry index*/
+  .mainindex {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas: "portada portada"
+ "carusel carusel"
+ "video1 video1"
+ "video2 video2"
+ "nosotros1 nosotros1"
+ "nosotros2 nosotros2"
+ "piezas piezas"
+ "foto1 foto2"
+ "foto3 foto4"; }
+  .portada .index {
+    min-height: 50vh; }
+    .portada .index h2 {
+      font-size: 4rem;
+      margin-top: 1rem; }
+    .portada .index a {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem; }
+  .nosotros1 .fotonosotros {
+    padding: 0px 0px;
+    padding-top: 55px;
+    padding-bottom: 25px; }
+  .nosotros2 {
+    grid-area: nosotros2; }
+    .nosotros2 .textonosotros h2 {
+      font-size: 2.5rem; }
+    .nosotros2 .textonosotros p {
+      font-size: 1.2rem; }
+  .piezas {
+    min-height: 40vh; }
+    .piezas .productos a {
+      font-size: 3.5rem;
+      margin-top: 2rem; }
+  /*Querry menu*/
+  .mainmenu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "portadamenu"
+ "carta1"
+ "carta2"
+ "carta3"; }
+  .portadamenu .indexmenu {
+    min-height: 25vh; }
+    .portadamenu .indexmenu h2 {
+      font-size: 4rem; }
+  .carta1 {
+    grid-area: carta1;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta1 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta1 h4 {
+      font-size: 2.5rem; }
+    .carta1 img {
+      width: 650px;
+      height: 850px; }
+  .carta2 {
+    grid-area: carta2;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta2 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta2 h4 {
+      font-size: 2.5rem; }
+    .carta2 img {
+      width: 650px;
+      height: 850px; }
+  .carta3 h4 {
+    font-size: 2.5rem; }
+  .carta3 img {
+    width: 650px;
+    height: 850px; }
+  .botoncartas {
+    font-size: 2rem; }
+  /*Querry Productos*/
+  .mainproductos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas: "portadaproductos"
+ "descproducto1"
+ "fotoproducto1"
+ "descproducto2"
+ "fotoproducto2" 
+ "descproducto3" 
+ "fotoproducto3"
+ "descproducto4"
+ "fotoproducto4" 
+ "descproducto5"
+ "fotoproducto5"
+ "descproducto6"
+ "fotoproducto6"; }
+  .portadaproductos .indexproductos {
+    min-height: 25vh; }
+    .portadaproductos .indexproductos h3 {
+      font-size: 4rem; }
+  .descproducto1 {
+    grid-area: descproducto1;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto1 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto1 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  .fotoproducto1 {
+    display: flex;
+    grid-area: fotoproducto1;
+    justify-content: center; }
+    .fotoproducto1 img {
+      width: 450px;
+      height: 450px; }
+  .fotoproducto2 {
+    display: flex;
+    grid-area: fotoproducto2;
+    justify-content: center; }
+    .fotoproducto2 img {
+      width: 450px;
+      height: 450px; }
+  .descproducto2 {
+    grid-area: descproducto2;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto2 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto2 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  .descproducto3 {
+    grid-area: descproducto3;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto3 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto3 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  .fotoproducto3 {
+    display: flex;
+    grid-area: fotoproducto3;
+    justify-content: center; }
+    .fotoproducto3 img {
+      width: 450px;
+      height: 450px; }
+  .fotoproducto4 {
+    display: flex;
+    grid-area: fotoproducto4;
+    justify-content: center; }
+    .fotoproducto4 img {
+      width: 450px;
+      height: 450px; }
+  .descproducto4 {
+    grid-area: descproducto4;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto4 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto4 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  .descproducto5 {
+    grid-area: descproducto5;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto5 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto5 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  .fotoproducto5 {
+    display: flex;
+    grid-area: fotoproducto5;
+    justify-content: center; }
+    .fotoproducto5 img {
+      width: 450px;
+      height: 450px; }
+  .fotoproducto6 {
+    display: flex;
+    grid-area: fotoproducto6;
+    justify-content: center; }
+    .fotoproducto6 img {
+      width: 450px;
+      height: 450px; }
+  .descproducto6 {
+    grid-area: descproducto6;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto6 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto6 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+  /*Querry Nosotros*/
+  .mainnosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "portadanosotros"
+ "fotopagnosotros"
+ "textopagnosotros"; }
+  .portadanosotros .indexnosotros {
+    min-height: 25vh; }
+    .portadanosotros .indexnosotros h3 {
+      font-size: 4rem; }
+  .fotopagnosotros img {
+    width: 450px;
+    height: 600px; }
+  .textopagnosotros {
+    padding-bottom: 2rem; }
+    .textopagnosotros h2 {
+      font-size: 2.7rem; }
+    .textopagnosotros p {
+      font-size: 1.5rem; }
+  /*Querry Contacto*/
+  .maincontacto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
+    overflow: hidden;
+    justify-content: center; }
+  .portadacontacto {
+    min-height: 25vh; }
+  .nosotros h1 {
+    font-size: 4rem; }
+  .nosotros p {
+    font-size: 1.5rem; }
+  .map-responsive {
+    grid-area: mapa;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-responsive iframe {
+    margin-bottom: 50px;
+    left: 0;
+    right: 15px;
+    top: 25%;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  .label {
+    font-size: 1.2rem; }
+  .inputs {
+    font-size: 0.9rem;
+    line-height: 1.5; } }
+
+@media screen and (max-width: 670px) {
+  /*Querry menu*/
+  .portadamenu .indexmenu {
+    min-height: 20vh; }
+    .portadamenu .indexmenu h2 {
+      font-size: 3rem; }
+  .carta1 {
+    grid-area: carta1;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta1 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta1 h4 {
+      font-size: 2.2rem; }
+    .carta1 img {
+      width: 450px;
+      height: 550px; }
+  .carta2 {
+    grid-area: carta2;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta2 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta2 h4 {
+      font-size: 2.2rem; }
+    .carta2 img {
+      width: 450px;
+      height: 550px; }
+  .carta3 h4 {
+    font-size: 2.2rem; }
+  .carta3 img {
+    width: 450px;
+    height: 550px; }
+  .botoncartas {
+    font-size: 1.6rem; } }
+
+@media screen and (max-width: 425px) {
+  /*Querry footer*/
+  .footer .disenofooter p {
+    text-align: end; }
+  /*Querry index*/
+  .mainindex {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "portada"
+ "carusel"
+ "video1"
+ "video2"
+ "nosotros1"
+ "nosotros2"
+ "piezas"; }
+  .portada .index {
+    min-height: 40vh; }
+    .portada .index h2 {
+      font-size: 3.5rem;
+      margin-top: 1rem; }
+    .portada .index a {
+      font-size: 3rem;
+      margin-bottom: 0.5rem; }
+  .nosotros1 .fotonosotros {
+    padding: 0px 0px;
+    padding-top: 55px;
+    padding-bottom: 25px; }
+  .nosotros2 {
+    grid-area: nosotros2; }
+    .nosotros2 .textonosotros h2 {
+      font-size: 2.5rem; }
+    .nosotros2 .textonosotros p {
+      font-size: 1.2rem; }
+  .piezas {
+    min-height: 30vh; }
+    .piezas .productos a {
+      font-size: 3rem;
+      margin-top: 0.9rem; }
+  .foto1 {
+    display: none; }
+  .foto2 {
+    display: none; }
+  .foto3 {
+    display: none; }
+  .foto4 {
+    display: none; }
+  /*Querry menu*/
+  .portadamenu .indexmenu {
+    min-height: 20vh; }
+    .portadamenu .indexmenu h2 {
+      font-size: 3rem; }
+  .carta1 {
+    grid-area: carta1;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta1 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta1 h4 {
+      font-size: 2.2rem; }
+    .carta1 img {
+      width: 380px;
+      height: 580px; }
+  .carta2 {
+    grid-area: carta2;
+    display: flex;
+    justify-content: center;
+    margin: 10px; }
+    .carta2 h4 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      margin-bottom: 10px; }
+    .carta2 h4 {
+      font-size: 2.2rem; }
+    .carta2 img {
+      width: 380px;
+      height: 580px; }
+  .carta3 h4 {
+    font-size: 2.2rem; }
+  .carta3 img {
+    width: 380px;
+    height: 580px; }
+  .botoncartas {
+    font-size: 1.6rem; }
+  /*Querry Productos*/
+  .portadaproductos .indexproductos {
+    min-height: 20vh; }
+    .portadaproductos .indexproductos h3 {
+      font-size: 3rem; }
+  .descproducto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto1 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto1 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto1 h2 {
+      font-size: 2.8rem; }
+    .descproducto1 p {
+      font-size: 1.1rem; }
+  .fotoproducto1 img {
+    width: 350px;
+    height: 350px; }
+  .fotoproducto2 img {
+    width: 350px;
+    height: 350px; }
+  .descproducto2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto2 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto2 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto2 h2 {
+      font-size: 2.8rem; }
+    .descproducto2 p {
+      font-size: 1.1rem; }
+  .descproducto3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto3 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto3 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto3 h2 {
+      font-size: 2.8rem; }
+    .descproducto3 p {
+      font-size: 1.1rem; }
+  .fotoproducto3 img {
+    width: 350px;
+    height: 350px; }
+  .fotoproducto4 img {
+    width: 350px;
+    height: 350px; }
+  .descproducto4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto4 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto4 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto4 h2 {
+      font-size: 2.8rem; }
+    .descproducto4 p {
+      font-size: 1.1rem; }
+  .descproducto5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto5 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto5 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto5 h2 {
+      font-size: 2.8rem; }
+    .descproducto5 p {
+      font-size: 1.1rem; }
+  .fotoproducto5 img {
+    width: 350px;
+    height: 350px; }
+  .fotoproducto6 img {
+    width: 350px;
+    height: 350px; }
+  .descproducto6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .descproducto6 h2 {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      font-size: 3rem; }
+    .descproducto6 p {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(255, 255, 255, 0.836);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      margin: 10px;
+      line-height: 1.5; }
+    .descproducto6 h2 {
+      font-size: 2.8rem; }
+    .descproducto6 p {
+      font-size: 1.1rem; }
+  /*Querry Nosotros*/
+  .portadanosotros .indexnosotros {
+    min-height: 20vh; }
+    .portadanosotros .indexnosotros h3 {
+      font-size: 3rem; }
+  .fotopagnosotros img {
+    width: 320px;
+    height: 480px; }
+  .textopagnosotros {
+    padding-bottom: 2rem; }
+    .textopagnosotros h2 {
+      font-size: 2.6rem; }
+    .textopagnosotros p {
+      font-size: 1.2rem; }
+  /*Querry Contacto*/
+  .maincontacto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
+    overflow: hidden; }
+  .portadacontacto {
+    display: none; }
+  .map-responsive {
+    grid-area: mapa;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-responsive iframe {
+    left: 0;
+    right: 15px;
+    top: 25%;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  .label {
+    font-size: 1.2rem; }
+  .inputs {
+    font-size: 0.9rem;
+    line-height: 1.5; } }
