@@ -1,0 +1,47 @@
+{
+    "productos":
+        [
+            {
+                "id": "1",
+                "nombre": "Sushi Clásico",
+                "precio": 150,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/clasico.jpg" } } } 
+            },
+            {
+                "id": "2",
+                "nombre": "Sushi Cocido",
+                "precio": 200,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/cocidos.jpg" } } } 
+            },
+            {
+                "id": "3",
+                "nombre": "Sushi Hot Rolls",
+                "precio": 250,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/hotroll.jpg" } } } 
+            },
+            {
+                "id": "4",
+                "nombre": "Sushi Sin Arroz",
+                "precio": 300,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/sinarroz.jpg" } } } 
+            },
+            {
+                "id": "5",
+                "nombre": "Sushi Niguiri",
+                "precio": 350,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/niguiri.jpg" } } } 
+            },
+            {
+                "id": "6",
+                "nombre": "Sushi Geisha",
+                "precio": 400,
+                "cantidad": 1,
+                "imagen": { "fields": { "file": { "url": "./media/fotos/piezas/geisha.png" } } } 
+            }
+        ]
+}

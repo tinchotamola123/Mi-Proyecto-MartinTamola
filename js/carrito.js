@@ -1,22 +1,12 @@
-//Stock de sushi
-let stockProductos =[
-    {id: 1,nombre:'Sushi Clásico',precio:150,cantidad:1,imagen:'clasico.jpg'},
-    {id: 2,nombre:'Sushi Cocido',precio:200,cantidad:1,imagen:'cocidos.jpg'},
-    {id: 3,nombre:'Sushi Hot Rolls',precio:250,cantidad:1,imagen:'hotroll.jpg'},
-    {id: 4,nombre:'Sushi Sin Arroz',precio:300,cantidad:1,imagen:'sinarroz.jpg'},
-    {id: 5,nombre:'Sushi Niguiri',precio:350,cantidad:1,imagen:'niguiri.jpg'},
-    {id: 6,nombre:'Sushi Geisha',precio:400,cantidad:1,imagen:'geisha.png'}];
+//HAY QE TENER el JSON SERVER instalarlo y corriendo en la terminal para simular un api.
 
-//Traigo el div del html para llenarlo y lo qe voy a usar    
+//Variables  
 const contenedorProductos = document.getElementById('contenedorProductos');
 const contenedorCarrito = document.getElementById('carrito-contenedor');
-
 const botonVaciar = document.getElementById('vaciar-carrito');
 const comprar = document.getElementById('compra');
-
 //SEXTIMO PASO, MODIFICAR LOS CONTADORES
 const contadorCarrito = document.getElementById('contadorCarrito');
-
 //OCTAVO PASO
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
@@ -36,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //SEXTO PASO
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
+
+    sessionStorage.setItem('carrito', JSON.stringify(carrito))
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     Toastify({
         text: "Todos los productos eliminados del carrito.",
         duration: 3000,
@@ -54,32 +47,43 @@ botonVaciar.addEventListener('click', () => {
 
 let carrito =[];
 //Lleno el html
-stockProductos.forEach((producto)=>{
-    const div = document.createElement('div');
-    div.classList.add('productos');
-    div.innerHTML = 
-    `
-    <article class="producto">
-                    <div class="imagenDiv">
-                        <img class="img" src="./media/fotos/piezas/${producto.imagen}" alt="">
-                    </div>
-                    <h3 class="titulo">${producto.nombre}</h3>
-                    <h4 class="precio">$${producto.precio} c/u</h4>
-                    <button id="agregar${producto.id}" class="botonCompra">Agregar</button>
-    </article>
-    `
-    contenedorProductos.appendChild(div);
+//fetch para traer de db.json los datos
+//HAY QE TENER el JSON SERVER instalarlo y corriendo en la terminal para simular un api
+const options = {method: 'GET'};
 
-    const boton = document.getElementById(`agregar${producto.id}`)
+fetch('http://localhost:3000/productos', options)
+  .then(response => response.json())
+  .then(stockProductos => {
 
-    //escucho los eventos del click en el boton de agrear
-    boton.addEventListener('click', () => {
-        agregarAlCarrito(producto.id);
+    
+
+    stockProductos.forEach((producto)=>{
+    
+        const div = document.createElement('div');
+        div.classList.add('productos');
+        div.innerHTML = 
+        `
+        <article class="producto">
+                        <div class="imagenDiv">
+                            <img class="img" src="${producto.imagen.fields.file.url}" alt="">
+                        </div>
+                        <h3 class="titulo">${producto.nombre}</h3>
+                        <h4 class="precio">$ ${producto.precio} c/u</h4>
+                        <button id="agregar${producto.id}" class="botonCompra">Agregar</button>
+        </article>
+        `
+        contenedorProductos.appendChild(div);
+    
+        const boton = document.getElementById(`agregar${producto.id}`)
+    
+        //escucho los eventos del click en el boton de agrear
+        boton.addEventListener('click', () => {
+            agregarAlCarrito(producto.id);
+        })
+        
     })
     
-})
-
-//trae el producto cuyo id sea igual id qe reciba por parametro
+    //trae el producto cuyo id sea igual id qe reciba por parametro
 // 1- PRIMER PASO
 
 //AGREGAR AL CARRITO
@@ -136,6 +140,15 @@ const agregarAlCarrito = (prodId) => {
     //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
     //MODIFICA EL CARRITO
 }
+
+  })
+  .catch(err => console.error(err));
+
+
+
+
+
+
 //agregarAlCarrito(1) //Le pasamos el ID por parametro. Tenemos que asigarle como evento esta funcion al boton
 //con el id de su producto correspondiente
 
@@ -181,7 +194,7 @@ const actualizarCarrito = () => {
         div.innerHTML = `
         <p>${prod.nombre}</p>
         <p>Precio: $${prod.precio}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad} piezas</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X</button>
         `
 
