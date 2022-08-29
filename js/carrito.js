@@ -87,7 +87,7 @@ fetch('http://localhost:3000/productos', options)
         
     })
     
-    //trae el producto cuyo id sea igual id qe reciba por parametro
+//trae el producto cuyo id sea igual id qe reciba por parametro
 // 1- PRIMER PASO
 
 //AGREGAR AL CARRITO
@@ -145,13 +145,8 @@ const agregarAlCarrito = (prodId) => {
     //MODIFICA EL CARRITO
 }
 
-  })
-  .catch(err => console.error(err));
-
-
-
-
-
+})
+.catch(err => console.error(err));
 
 //agregarAlCarrito(1) //Le pasamos el ID por parametro. Tenemos que asigarle como evento esta funcion al boton
 //con el id de su producto correspondiente

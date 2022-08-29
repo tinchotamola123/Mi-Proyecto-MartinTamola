@@ -60,7 +60,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 35vh; }
+    min-height: 20vh; }
     .portadaproductos .indexproductos h3 {
       font-family: 'Architects Daughter', cursive;
       color: rgba(255, 255, 255, 0.836);
@@ -188,6 +188,7 @@ color: rgba(247, 12, 12, 0.5);
 border: none;
 font-size: 35px;
 display: flex;
+justify-content: center;
 }
 .contador h1{
   padding-right: 25px;
@@ -266,4 +267,54 @@ display: flex;
 }
 .swal2-styled.swal2-confirm{
   background-color: #881313;
+}
+
+/* Medias query*/
+@media screen and (max-width: 930px) {
+
+  #contenedorProductos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+   }
+
+}
+@media screen and (max-width: 625px) {
+
+  #contenedorProductos{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-row-gap: 10px;
+  }
+  .portadaproductos .indexproductos h3 {
+    font-size: 2.5rem; 
+  }
+  .carritoLista{
+  width: 100%;
+  }
+  .productoEnCarrito p{
+    font-size: 15px;
+  }
+  .precioProducto{
+    font-size: 25px;
+  }
+  .contador h1{
+    font-size: 1.9rem;
+  }
+  .contador{
+    font-size: 30px
+  }
+  .footer .disenofooter p {
+    font-size: 1.1rem; 
+  }
+  .producto{
+    width: 200px;
+    font-size: 100px;
+  }
+  .producto h3{
+    font-size:20px;
+  }
+  .producto h4{
+    font-size:20px;
+  }
 }
