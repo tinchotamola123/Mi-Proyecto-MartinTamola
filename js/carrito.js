@@ -211,7 +211,7 @@ const actualizarCarrito = () => {
     })
     //actualizamos con la longitud del carrito
     contadorCarrito.innerText = carrito.length
-    console.log(carrito)
+    //console.log(carrito)
      //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
     //empezando en 0.
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
@@ -245,7 +245,7 @@ const restarCarrito = (prodId) => {
 //popup con la compra.
 const realizarCompra = () =>{
     let total = precioTotal.textContent;
-    console.log(total);    
+    //console.log(total);    
     Swal.fire({
         title: `Compra Realizada Con Éxito! <br> Total: $${precioTotal.textContent}`,
         imageUrl: 'media/fotos/logo.png',
