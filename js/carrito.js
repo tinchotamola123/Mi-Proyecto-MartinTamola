@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // BORRAR TODO EL CARRITO
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
+    carrito.cantidad = 0
 
     sessionStorage.setItem('carrito', JSON.stringify(carrito))
     localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -161,12 +162,11 @@ const agregarAlCarrito = (prodId) => {
 
 // ELIMINAR DEL CARRITO
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-
+    
+    const item = carrito.find((prod) => prod.id == prodId)
     const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
-
-    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
-    // un elemento 
+    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos el elemento 
+    carrito.cantidad = 0
     Toastify({
         text: "Eliminado del carrito",
         duration: 3000,
