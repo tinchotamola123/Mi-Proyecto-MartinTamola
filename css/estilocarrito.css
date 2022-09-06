@@ -259,6 +259,9 @@ display: flex;
   display: flex;
   justify-content: center;
 }
+#mas{
+  padding-right: 20px;
+}
 
 /*popup compra*/
 .swal2-popup{
